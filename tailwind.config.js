@@ -8,8 +8,8 @@ module.exports = {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-        "pokeball-lg": "url('/assets/pokeball_lg.png')",
-        "pokeball-sm": "url('/assets/pokeball_sm.png')",
+        "pokeball-lg": "url('/assets/pokeball_lg.jpg')",
+        "pokeball-sm": "url('/assets/pokeball_sm.jpg')",
       },
       boxShadow: {
         'custom': '6px 6px 5px 2px rgba(0, 0, 1, 0.3)',
