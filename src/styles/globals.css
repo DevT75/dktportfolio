@@ -60,6 +60,14 @@ html {
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'Pokefont';
+  src: url('../fonts/pokemon-rby.otf') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
 body {
   font-family: 'Aeonik';
   background: #f5f4f5;
@@ -97,4 +105,22 @@ body.scrolled .header {
 
 .font_aeonik {
   font-family: 'Aeonik';
+}
+
+.poke-font {
+  font-family: 'Pokefont';
+}
+
+.container {
+  background-image:
+    linear-gradient(rgba(51, 65, 85, 0.3) .1em, transparent .1em),
+    linear-gradient(90deg, rgba(51, 65, 85, 0.3) .1em, transparent .1em);
+  background-size: 4em 4em;
+}
+.grow-from-left {
+  transform-origin: left center;
+}
+
+.grow-from-right {
+  transform-origin: right center;
 }

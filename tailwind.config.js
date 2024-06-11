@@ -13,7 +13,11 @@ module.exports = {
       },
       boxShadow: {
         'custom': '6px 6px 5px 2px rgba(0, 0, 1, 0.3)',
-        'bottom': '0 6px 3px 2px rgba(0, 0, 1, 0.3)',
+        'bottom': '0 6px 5px 1px rgba(0, 0, 1, 0.3)',
+        'text-box':'6px 6px 5px 2px rgba(0, 0, 1, 0.3), inset 12px 0 4px 0 rgba(245, 0, 0, 1),inset -12px 0 4px 0 rgba(245, 0, 0, 1),inset 0 3px 3px 0 rgba(245, 0, 0, 0.3)',
+        'top':'inset 0 6px 2px 0 rgba(240, 0, 0, 0.8)',
+        'friend':'inset 0 6px 2px 0 rgba(240, 0, 0, 0.8),6px 6px 5px 2px rgba(0, 0, 1, 0.3)',
+        'tab':'0 6px 5px 1px rgba(0, 0, 1, 0.3), inset 0 6px 5px 1px rgba(0, 0, 1, 0.3)',
       },
       transitionProperty: {
         height: 'height',
