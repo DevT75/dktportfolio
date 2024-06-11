@@ -22,7 +22,7 @@ export const TopCard = () => {
         <div className='flex container origin-left flex-col justify-between items-center w-full h-full transition-all duration-200 ease-out'>
             <div className='h-[14%] w-full bg-red-700 shadow-bottom' />
             <div className='flex flex-row justify-around items-center w-full h-[65%]'>
-                <div className='w-[45%] flex flex-col justify-center items-center relative'>
+                <div className='w-[45%] h-full flex flex-col justify-center items-center relative'>
                     <Image
                         src={'/assets/rayquaza.jpg'}
                         alt='Rayquaza'
@@ -33,6 +33,9 @@ export const TopCard = () => {
                         priority
                         className='rounded-lg'
                         onClick={play}
+                        sizes="(max-width: 768px) 100vw, 
+                        (max-width: 1200px) 50vw, 
+                        33vw"
                         // style={{ width: 'auto', height: 'auto' }}
                         // className='cursor-pointer'
                     />
@@ -70,7 +73,7 @@ export const TopCard = () => {
                         <div className=' bg-white md:px-4 flex flex-col justify-around rounded-md shadow-custom w-[68%] h-[90%] border-2 border-slate-500 transition-all duration-200 ease-out'>
                             <div className='h-full flex flex-row justify-around items-center'>
                                 <span className='md:text-sm text-[10px] font-normal'>HT</span>
-                                <span className='md:text-sm text-[10px] font-normal'>5&apos; 10&quot;</span>
+                                <span className='md:text-sm text-[10px] font-normal'>5&#39; 10&#34;</span>
                             </div>
                             <div className='h-[1px] border border-slate-700 border-dashed' />
                             <div className='h-full flex flex-row justify-around items-center'>
