@@ -70,7 +70,7 @@ export const TopCard = () => {
                         <div className=' bg-white md:px-4 flex flex-col justify-around rounded-md shadow-custom w-[68%] h-[90%] border-2 border-slate-500 transition-all duration-200 ease-out'>
                             <div className='h-full flex flex-row justify-around items-center'>
                                 <span className='md:text-sm text-[10px] font-normal'>HT</span>
-                                <span className='md:text-sm text-[10px] font-normal'>5' 10"</span>
+                                <span className='md:text-sm text-[10px] font-normal'>5&apos; 10&quot;</span>
                             </div>
                             <div className='h-[1px] border border-slate-700 border-dashed' />
                             <div className='h-full flex flex-row justify-around items-center'>
