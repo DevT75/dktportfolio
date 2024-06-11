@@ -20,24 +20,21 @@ export const TopCard = () => {
     }
     return (
         <div className='flex container origin-left flex-col justify-between items-center w-full h-full transition-all duration-200 ease-out'>
-            <div className='h-[14%] w-full bg-red-700 shadow-bottom' />
+            <div className='h-[14%] w-full bg-red-700 shadow-bottom flex flex-row justify-start items-center pl-4 gap-2'>
+                <FaCaretDown size={24} className='text-white -mt-1' />
+                <span className='text-[16px] uppercase text-center text-white'>INFO</span>
+            </div>
             <div className='flex flex-row justify-around items-center w-full h-[65%]'>
                 <div className='w-[45%] h-full flex flex-col justify-center items-center relative'>
                     <Image
                         src={'/assets/rayquaza.jpg'}
                         alt='Rayquaza'
-                        // width={150}
-                        // height={160}
                         layout='fill'
                         objectFit='contain'
                         priority
-                        className='rounded-lg'
+                        className='rounded-lg cursor-pointer'
                         onClick={play}
-                        sizes="(max-width: 768px) 100vw, 
-                        (max-width: 1200px) 50vw, 
-                        33vw"
-                        // style={{ width: 'auto', height: 'auto' }}
-                        // className='cursor-pointer'
+                        sizes="(max-width: 768px) 100vw,(max-width: 1200px) 50vw,33vw"
                     />
                 </div>
                 <div className='flex flex-col relative w-[55%] h-[95%] gap-2 justify-between pr-2'>
