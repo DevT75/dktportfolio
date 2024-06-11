@@ -57,13 +57,13 @@ export const LandingPage = () => {
                 </div>
             </div>
             <div className='flex flex-col lg:flex-row justify-center gap-1 items-center transition-all duration-500 ease-out h-[90%] w-full'>
-                <div className='relative transition-all duration-500 ease-out bg-white border-black w-[85%] h-[43%] md:w-[70%] md:h-[45%] lg:w-[43%] lg:h-[65%]'>
+                <div className='relative transition-all duration-500 ease-out bg-white border-black w-[85%] h-[43%] md:w-[70%] md:h-[50%] lg:w-[43%] lg:h-[75%]'>
                     {
                         <TopCard />
                     }
 
                 </div>
-                <div className='relative transition-all duration-500 ease-out bg-white border-black w-[85%] h-[43%] md:w-[70%] md:h-[45%] lg:w-[43%] lg:h-[65%]'>
+                <div className='relative transition-all duration-500 ease-out bg-white border-black w-[85%] h-[43%] md:w-[70%] md:h-[50%] lg:w-[43%] lg:h-[75%]'>
                     {
                         <BottomCard />
                     }
