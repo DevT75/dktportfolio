@@ -17,6 +17,9 @@ const PageContext = createContext({
 export const PageProvider = ({ children }) => {
     const [lenis, setLenis] = useState(null);
     const reqIdRef = useRef(null);
+    const [info,setInfo] = useState(true);
+    const [stats,setStats] = useState(false);
+    const [track,setTrack] = useState(false);
 
     useLayoutEffect(() => {
         const lenis = new Lenis({
@@ -79,7 +82,7 @@ export const PageProvider = ({ children }) => {
     );
 
     return (
-        <PageContext.Provider value={memoedValue}>
+        <PageContext.Provider value={{memoedValue,info,setInfo,stats,setStats,track,setTrack }}>
             {children}
         </PageContext.Provider>
     );
