@@ -13,15 +13,26 @@ import { PiArrowCircleDownFill } from "react-icons/pi";
 import { PiArrowCircleUp } from "react-icons/pi";
 import { PiArrowCircleUpFill } from "react-icons/pi";
 import useSound from 'use-sound';
+import usePage from '@/context/PageContext';
 import { Info } from './Info';
 import { Stats } from './Stats';
 import { Track } from './Track';
 export const TopCard = () => {
+    const { info, stats, track } = usePage();
     return (
         <div className='w-full h-full overflow-hidden'>
-                <Stats/>
+            {
+                info && <Info/>
+            }
+            {
+                stats && <Stats/>
+            }
+            {
+                track && <Track/>
+            }
+                {/* <Stats/>
                 <Track/>
-                <Info/>
+                <Info/> */}
         </div>
     )
 }

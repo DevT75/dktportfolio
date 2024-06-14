@@ -20,19 +20,19 @@ export const ExtraInfo = () => {
     const handleFriend = () => {
         alert('You are my FRIEND!!');
     }
-    const { info } = usePage();
+    const { info,setInfo,stats,setStats,track,setTrack } = usePage();
     return (
-        <div className='container relative transition-all duration-500 ease-out flex flex-col-reverse justify-between items-center w-full h-full'>
+        <div className={`container relative transition-all duration-500 ease-out flex flex-col-reverse justify-between items-center w-full h-full`}>
             <div className='w-full z-10 h-[25%] lg:h-[15%] border-t-4 border-b-4 border-black transition-all duration-500 ease-out mb-1'>
-                <div className='w-full h-full bg-blue-600 flex flex-row gap-1 md:gap-2 py-4 px-2 justify-around items-center'>
-                    <div className='flex flex-1 flex-col gap-1 justify-center items-center uppercase py-3 md:py-2 px-1.5 rounded-md border border-blue-600 border-dashed bg-white text-[10px] group'
+                <div className='w-full h-full bg-blue-600 flex flex-row gap-1 md:gap-3 py-4 lg:py-2 px-2 justify-around items-center'>
+                    <div className='flex lg:h-full flex-1 flex-col gap-1 justify-center items-center uppercase py-2 md:py-2 px-1.5 rounded-md border border-blue-600 border-dashed bg-white text-[10px] group'
                         onClick={() => {
                             setStats(true);
                             setInfo(false);
                             setTrack(false);
                         }}
                     >
-                        <div className='hidden sm:flex w-[50%] flex-col -mt-1'>
+                        <div className='hidden md:flex w-[50%] flex-col -mt-1'>
                             <div className='flex flex-row justify-center items-center'>
                                 <PiArrowCircleUp size={14} />
                             </div>
@@ -45,7 +45,7 @@ export const ExtraInfo = () => {
                         <span className='flex justify-center items-center'>Stats</span>
                     </div>
                     <div className='flex flex-1 flex-col gap-1 justify-center items-center uppercase py-3 md:py-2 px-1.5 rounded-md border border-blue-600 border-dashed bg-white text-[10px] group'>
-                        <div className='hidden sm:flex w-[50%] flex-col -mt-1'>
+                        <div className='hidden lg:h-full md:flex w-[50%] flex-col -mt-1'>
                             <div className='flex flex-row justify-center items-center'>
                                 <PiArrowCircleUp size={14} />
                             </div>
@@ -64,7 +64,7 @@ export const ExtraInfo = () => {
                             setTrack(true);
                         }}
                     >
-                        <div className='hidden sm:flex w-[50%] flex-col -mt-1'>
+                        <div className='hidden md:flex w-[50%] flex-col -mt-1'>
                             <div className='flex flex-row justify-center items-center'>
                                 <PiArrowCircleUp size={14} />
                             </div>

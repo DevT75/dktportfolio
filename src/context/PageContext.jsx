@@ -20,6 +20,8 @@ export const PageProvider = ({ children }) => {
     const [info,setInfo] = useState(true);
     const [stats,setStats] = useState(false);
     const [track,setTrack] = useState(false);
+    const [extraInfo,setExtraInfo] = useState(true);
+    const [bottomInfo,setBottomInfo] = useState(false);
 
     useLayoutEffect(() => {
         const lenis = new Lenis({
@@ -82,7 +84,19 @@ export const PageProvider = ({ children }) => {
     );
 
     return (
-        <PageContext.Provider value={{memoedValue,info,setInfo,stats,setStats,track,setTrack }}>
+        <PageContext.Provider value={{
+            memoedValue,
+            info,
+            setInfo,
+            stats,
+            setStats,
+            track,
+            setTrack,
+            extraInfo,
+            setExtraInfo,
+            bottomInfo,
+            setBottomInfo
+            }}>
             {children}
         </PageContext.Provider>
     );

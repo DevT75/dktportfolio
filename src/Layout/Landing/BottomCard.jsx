@@ -16,14 +16,19 @@ import useSound from 'use-sound';
 import usePage from '@/context/PageContext';
 import PreviousMap from 'postcss/lib/previous-map';
 import { ExtraInfo } from './ExtraInfo';
+import { Info } from './Info';
 
 
 export const BottomCard = () => {
-    const { info, setInfo, stats, setStats, track, setTrack } = usePage();
+    const { info, stats, track, extraInfo, bottomInfo } = usePage();
     return (
-        <div className='w-full h-full overflow-hidden'>
-            
-            <ExtraInfo />
+        <div className='w-full h-full overflow'>
+            {
+                bottomInfo && <Info/>
+            }
+            {
+                extraInfo && <ExtraInfo/>
+            }
         </div>
     )
 }

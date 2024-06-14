@@ -22,7 +22,8 @@ export const Info = () => {
     }
     const { info } = usePage();
     return (
-        <div className={`flex container ${info ? "translate-x-0" : "-translate-x-[101%]"} -translate-y-[200.5%] origin-left flex-col justify-between items-center w-full h-full transition-all duration-200 ease-out`}>
+        // <div className={`flex container ${info ? "translate-x-0" : "-translate-x-[101%]"} -translate-y-[200.5%] origin-left flex-col justify-between items-center w-full h-full transition-all duration-200 ease-out`}>
+        <div className={`flex container origin-left flex-col justify-between items-center w-full h-full transition-all duration-200 ease-out`}>
             <div className='h-[14%] w-full bg-red-700 shadow-bottom flex flex-row justify-start items-center pl-4 gap-2'>
                 <FaCaretDown size={24} className='text-white -mt-1' />
                 <span className='text-[16px] uppercase text-center text-white'>INFO</span>

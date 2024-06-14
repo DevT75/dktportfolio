@@ -22,6 +22,7 @@ export const Stats = () => {
     }
     const { stats } = usePage();
     return (
+        // <div className={`flex container -mt-0 ${stats ? "translate-x-0" : "translate-x-[101%]"} origin-left flex-col justify-between items-center w-full h-full transition-all duration-200 ease-out`}>
         <div className={`flex container -mt-0 ${stats ? "translate-x-0" : "translate-x-[101%]"} origin-left flex-col justify-between items-center w-full h-full transition-all duration-200 ease-out`}>
             <div className='h-[14%] w-full bg-red-700 shadow-bottom flex flex-row justify-start items-center pl-4 gap-2'>
                 <FaCaretDown size={24} className='text-white -mt-1' />

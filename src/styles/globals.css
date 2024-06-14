@@ -117,6 +117,7 @@ body.scrolled .header {
     linear-gradient(90deg, rgba(51, 65, 85, 0.3) .1em, transparent .1em);
   background-size: 4em 4em;
 }
+
 .grow-from-left {
   transform-origin: left center;
 }
@@ -132,11 +133,13 @@ body.scrolled .header {
   height: 100%;
   outline: 2px solid black;
 }
+
 .sidebar-left {
   left: 0;
   width: 16%;
   clip-path: polygon(0 0, 0 100%, 70% 100%, 70% 23%, 80% 20%, 80% 0);
 }
+
 .sidebar-right {
   right: 0;
   width: 15%;
@@ -145,50 +148,51 @@ body.scrolled .header {
 
 @media (max-width: 768px) {
   .sidebar-left {
-      width: 15%;
+    width: 15%;
   }
 }
 
 @media (min-width: 380px) {
   .sidebar-left {
-      width: 13%;
+    width: 13%;
   }
 }
 
 @media (min-width: 500px) {
   .sidebar-left {
-      width: 11%;
+    width: 11%;
   }
 }
 
 @media (min-width: 730px) {
   .sidebar-left {
-      width: 10%;
+    width: 10%;
   }
 }
 
 @media (max-width: 1070px) {
   .sidebar-right {
-      width: 18%;
+    width: 18%;
   }
 }
 
 @media (min-width: 1070px) {
   .sidebar-right {
-      width: 15%;
+    width: 15%;
   }
 }
 
 @media (min-width: 1200px) {
   .sidebar-right {
-      width: 13%;
+    width: 13%;
   }
 }
 
 @media (min-width: 1400px) {
   .sidebar-right {
-      width: 10%;
+    width: 10%;
   }
+
   /* .sidebar #lg-info{
     padding-top: 3.5rem;
     padding-left: 0.5rem;
@@ -204,25 +208,48 @@ body.scrolled .header {
 
 @media (min-width: 768px) {
   .sidebar-left {
-      display: none;
+    display: none;
   }
+
   .sidebar-right {
-      display: flex;
+    display: flex;
   }
 }
+
 @media (max-width: 1024px) {
   .sidebar-left {
-      display: flex;
+    display: flex;
   }
+
   .sidebar-right {
-      display: none;
+    display: none;
   }
 }
+
 @media (min-width: 1024px) {
   .sidebar-left {
-      display: none;
+    display: none;
   }
+
   .sidebar-right {
-      display: flex;
+    display: flex;
   }
+}
+
+@keyframes ping {
+  0% {
+    opacity: 1;
+    width: 0;
+    height: 0;
+  }
+
+  100% {
+    opacity: 0;
+    width: 100px;
+    height: 100px;
+  }
+}
+
+.ping {
+  animation: ping 1s infinite;
 }
