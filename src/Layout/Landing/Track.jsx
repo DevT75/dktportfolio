@@ -29,27 +29,32 @@ export const Track = () => {
                 <FaCaretDown size={24} className='text-white -mt-1 text-border-black text-border-size-2' />
                 <span className='text-[18px] text-border-black text-border-size-2 uppercase text-center text-white'>Track</span>
             </div>
-            <div className='h-[86%] w-full flex justify-start items-center'>
-                <div className='relative w-[200px] h-[200px] md:w-[230px] md:h-[230px] lg:w-[350px] lg:h-[350px]
+            <div className="h-[86%] w-full flex flex-row justify-around items-center">
+                <div className='h-full w-auto flex justify-between gap-1 items-center'>
+                    <div className='relative w-[200px] h-[200px] md:w-[230px] md:h-[230px] lg:w-[350px] lg:h-[350px]
                     transition-all duration-200 ease-out
                 '>
-                    <Image
-                        src={'/assets/india.svg'}
-                        alt='Rayquaza'
-                        layout='fill'
-                        objectFit='contain'
-                        priority
-                        className='rounded-lg cursor-pointer'
-                        onClick={play}
-                        sizes="(max-width: 768px) 100vw,(max-width: 1200px) 50vw,33vw"
-                    />
-                    <div className='absolute top-[29%] left-[22%] md:top-[32%] md:left-[26%] lg:top-[40%] lg:left-[33%] h-[100px] w-[100px]'>
-                        <div className='w-[3px] h-[3px] lg:w-[4px] lg:h-[4px] absolute top-[50%] left-[50%] rounded-full bg-white -translate-x-[50%] -translate-y-[50%]'></div>
-                        <div className='absolute border-4 border-white border-dashed rounded-full ping top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%]'></div>
+                        <Image
+                            src={'/assets/india.svg'}
+                            alt='Rayquaza'
+                            layout='fill'
+                            objectFit='contain'
+                            priority
+                            className='rounded-lg cursor-pointer'
+                            onClick={play}
+                            sizes="(max-width: 768px) 100vw,(max-width: 1200px) 50vw,33vw"
+                        />
+                        <div className='absolute top-[29%] left-[22%] md:top-[32%] md:left-[26%] lg:top-[40%] lg:left-[33%] h-[100px] w-[100px]'>
+                            <div className='w-[3px] h-[3px] lg:w-[4px] lg:h-[4px] absolute top-[50%] left-[50%] rounded-full bg-white -translate-x-[50%] -translate-y-[50%]'></div>
+                            <div className='absolute border-4 border-white border-dashed rounded-full ping top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%]'></div>
+                        </div>
                     </div>
                 </div>
-
+                <div className="h-full w-[40%] flex flex-col justify-center items-center">
+                    Hello
+                </div>
             </div>
+
         </div>
     )
 }

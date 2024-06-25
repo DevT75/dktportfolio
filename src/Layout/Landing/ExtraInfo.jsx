@@ -12,6 +12,9 @@ import { PiArrowCircleDown } from "react-icons/pi";
 import { PiArrowCircleDownFill } from "react-icons/pi";
 import { PiArrowCircleUp } from "react-icons/pi";
 import { PiArrowCircleUpFill } from "react-icons/pi";
+import { FaAngleLeft } from "react-icons/fa";
+import { FaAngleRight } from "react-icons/fa";
+import { FaAngleDown } from "react-icons/fa";
 import useSound from 'use-sound';
 import usePage from '@/context/PageContext';
 
@@ -20,32 +23,35 @@ export const ExtraInfo = () => {
     const handleFriend = () => {
         alert('You are my FRIEND!!');
     }
-    const { info,setInfo,stats,setStats,track,setTrack } = usePage();
+    const { info, setInfo, stats, setStats, track, setTrack } = usePage();
     return (
         <div className={`container relative transition-all duration-500 ease-out flex flex-col-reverse justify-between items-center w-full h-full`}>
             <div className='w-full z-10 h-[25%] lg:h-[15%] border-t-4 border-b-4 border-black transition-all duration-500 ease-out mb-1'>
                 <div className='w-full h-full bg-blue-600 flex flex-row gap-1 md:gap-3 py-4 lg:py-2 px-2 justify-around items-center'>
-                    <div className='flex lg:h-full flex-1 flex-col gap-1 justify-center items-center uppercase py-2 md:py-2 px-1.5 rounded-md border border-blue-600 border-dashed bg-white text-[10px] group'
+                    <div className='relative flex lg:h-[90%] text-[10px] md:text-[12px] xl:text-[14px] xlg:text-[16px] flex-1 flex-row gap-2 p-[2%] justify-center items-center uppercase px-1.5 rounded-md border border-blue-600 border-dashed bg-white group'
                         onClick={() => {
                             setStats(true);
                             setInfo(false);
                             setTrack(false);
                         }}
                     >
-                        <div className='hidden md:flex w-[50%] flex-col -mt-1'>
+                        {/* <div className='hidden md:flex w-[50%] flex-col -mt-1'>
                             <div className='flex flex-row justify-center items-center'>
-                                <PiArrowCircleUp size={14} />
+                                <PiArrowCircleUp size={16} />
                             </div>
                             <div className='flex flex-row justify-center items-center'>
-                                <PiArrowCircleLeftFill size={14} />
-                                <PiArrowCircleDown size={14} />
-                                <PiArrowCircleRight size={14} />
+                                <PiArrowCircleLeftFill size={16} />
+                                <PiArrowCircleDown size={16} />
+                                <PiArrowCircleRight size={16} />
                             </div>
-                        </div>
-                        <span className='flex justify-center items-center'>Stats</span>
+                        </div> */}
+                        {/* <div className="hidden md:flex absolute bg-black rounded-tl rounded-bl border-black text-white left-0 h-full w-[10px] flex flex-row justify-center items-center">
+                            <FaAngleLeft size={14}/>
+                        </div> */}
+                        <span className='flex justify-center items-center mt-1.5'>Stats</span>
                     </div>
-                    <div className='flex flex-1 flex-col gap-1 justify-center items-center uppercase py-3 md:py-2 px-1.5 rounded-md border border-blue-600 border-dashed bg-white text-[10px] group'>
-                        <div className='hidden lg:h-full md:flex w-[50%] flex-col -mt-1'>
+                    <div className='flex p-[2%] relative lg:h-[90%] text-[10px] md:text-[12px] xl:text-[14px] xlg:text-[16px] flex-1 flex-row gap-2 justify-center items-center uppercase px-1.5 rounded-md border border-blue-600 border-dashed bg-white group'>
+                        {/* <div className='hidden lg:h-full md:flex w-[50%] flex-col -mt-1'>
                             <div className='flex flex-row justify-center items-center'>
                                 <PiArrowCircleUp size={14} />
                             </div>
@@ -54,17 +60,20 @@ export const ExtraInfo = () => {
                                 <PiArrowCircleDownFill size={14} />
                                 <PiArrowCircleRight size={14} />
                             </div>
-                        </div>
-                        <span>Details</span>
+                        </div> */}
+                        {/* <div className="hidden md:flex absolute bg-black rounded-bl rounded-br border-black text-white bottom-0 w-full h-[8px] flex flex-row justify-center items-center">
+                            <FaAngleDown size={14} className="md:flex" />
+                        </div> */}
+                        <span className='flex justify-center items-center mt-1.5'>Details</span>
                     </div>
-                    <div className='flex flex-1 flex-col gap-1 justify-center items-center uppercase py-3 md:py-2 px-1.5 rounded-md border border-blue-600 border-dashed bg-white text-[10px] group'
+                    <div className='relative flex lg:h-[90%] text-[10px] md:text-[12px] xl:text-[14px] xlg:text-[16px] flex-1 flex-row gap-2 p-[2%] justify-center items-center uppercase px-1.5 rounded-md border border-blue-600 border-dashed bg-white group'
                         onClick={() => {
                             setInfo(false);
                             setStats(false);
                             setTrack(true);
                         }}
                     >
-                        <div className='hidden md:flex w-[50%] flex-col -mt-1'>
+                        {/* <div className='hidden md:flex w-[50%] flex-col -mt-1'>
                             <div className='flex flex-row justify-center items-center'>
                                 <PiArrowCircleUp size={14} />
                             </div>
@@ -73,18 +82,20 @@ export const ExtraInfo = () => {
                                 <PiArrowCircleDown size={14} />
                                 <PiArrowCircleRightFill size={14} />
                             </div>
-                        </div>
-                        <span>Track</span>
+                        </div> */}
+                        {/* <div className="hidden md:flex absolute bg-black rounded-tr rounded-br border-black text-white right-0 h-full w-[10px] flex flex-row justify-center items-center">
+                            <FaAngleRight size={14} className="md:flex" />
+                        </div> */}
+                        <span className='flex justify-center items-center mt-1.5'>Track</span>
                     </div>
-
-                    <div className='flex flex-1 flex-row gap-2 justify-center items-center uppercase py-3 md:py-[1.4rem] px-1.5 rounded-md border border-blue-600 border-dashed bg-white text-[10px] group'
+                    <div className='relative flex lg:h-[90%] text-[10px] md:text-[12px] xl:text-[14px] xlg:text-[16px] flex-1 flex-row gap-2 p-[2%] justify-center items-center uppercase px-1.5 rounded-md border border-blue-600 border-dashed bg-white group'
                         onClick={() => {
                             setInfo(true);
                             setStats(false);
                             setTrack(false);
                         }}
                     >
-                        <span>Quit</span>
+                        <span className='flex justify-center items-center mt-1.5'>Quit</span>
                     </div>
                     {/* <div className='flex flex-1 flex-row justify-center items-center uppercase py-3 px-1.5 rounded-md border border-blue-600 border-dashed bg-white text-[10px]'>Quit</div> */}
                 </div>
@@ -104,8 +115,8 @@ export const ExtraInfo = () => {
                     </div>
                 </div>
                 <div className='flex justify-center items-center w-full h-full'>
-                    <div>
-                        Hello
+                    <div className="w-[80%] h-[80%] items-center">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda repellat, consequatur vero placeat dicta commodi hic praesentium. Ab amet dolorem illo officia eveniet consequuntur cumque! Molestias minima earum quod beatae!
                     </div>
                 </div>
                 <div className='sidebar bg-red-700 sidebar-right shadow-sidebar-right flex-col justify-between items-center pl-2'>

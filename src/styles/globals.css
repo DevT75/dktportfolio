@@ -253,3 +253,80 @@ body.scrolled .header {
 .ping {
   animation: ping 1s infinite;
 }
+.slideUp{
+  animation: 1s cubic-bezier(0.8, 0.8, 0, 0.9) 0s slideup;
+}
+
+
+@keyframes slideup{
+  0%{
+    /* transform: translateY(0%); */
+    background-color: white;
+    z-index: 10;
+    height: 50%;
+  }
+  100%{
+    /* transform: translateY(-86%); */
+    background-color: #f4f5f4;
+    z-index: 10;
+    height: 8%;
+  }
+}
+
+.slideDown{
+  animation: 1s cubic-bezier(0.8, 0.8, 0, 0.9) 0s slidedown;
+  overflow-y: hidden;
+}
+
+
+@keyframes slidedown{
+  0%{
+    background-color: red;
+    z-index: 10;
+    height: 50%;
+  }
+  100%{
+    background-color: #282829;
+    z-index: 10;
+    height: 7%;
+  }
+}
+
+@keyframes upMove{
+  0%{
+    transform: translateY(100%);
+  }
+  100%{
+    transform: translateY(0%);
+  }
+}
+
+.up{
+  animation: 0.7s ease-out 0.6s upMove;
+}
+
+@keyframes downMove{
+  0%{
+    transform: translateY(-100%);
+  }
+  100%{
+    transform: translateY(0%);
+  }
+}
+
+.down{
+  animation: 0.7s ease-out 0.5s downMove;
+}
+
+.show{
+  animation : 1s ease-out 1s sh;
+}
+
+@keyframes sh{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}

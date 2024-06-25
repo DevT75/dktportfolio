@@ -61,12 +61,12 @@ export const Info = () => {
                             <div className='w-full md:w-[45%] h-[85%] md:h-[70%] relative rounded flex flex-col justify-center items-center border border-slate-500'>
                                 <div className='h-[50%] w-full bg-[#53a4cf] rounded-tl-sm rounded-tr-sm' />
                                 <div className='h-[50%] w-full bg-[#f165f7] rounded-bl-sm rounded-br-sm' />
-                                <span className='text-white font-semibold absolute text-center z-10 text-[7px] md:text-[8px] uppercase'>Dragon</span>
+                                <span className='text-white font-semibold absolute text-center text-[7px] md:text-[8px] uppercase'>Dragon</span>
                             </div>
                             <div className='w-full md:w-[45%] h-[85%] md:h-[70%] relative rounded flex flex-col justify-center items-center border border-slate-500'>
                                 <div className='h-[50%] w-full bg-[#3dc7ee] rounded-tl-sm rounded-tr-sm' />
                                 <div className='h-[50%] w-full bg-[#bdb9b8] rounded-bl-sm rounded-br-sm' />
-                                <span className='text-white font-semibold absolute text-center z-10 text-[7px] md:text-[8px] uppercase'>Flying</span>
+                                <span className='text-white font-semibold absolute text-center text-[7px] md:text-[8px] uppercase'>Flying</span>
                             </div>
                         </div>
                     </div>
