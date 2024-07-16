@@ -35,7 +35,7 @@ export const LandingPage = () => {
     //     play();
     // }, [toggleAudio])
     return (
-        <div className="poke-font flex flex-col w-full h-full justify-between items-center bg-pokeball-sm bg-center transition-all duration-300 ease-out bg-cover lg:bg-pokeball-lg">
+        <div className="poke-font flex flex-col w-full h-full p-0 m-0 justify-between items-center bg-pokeball-sm bg-center transition-all duration-300 ease-out bg-cover lg:bg-pokeball-lg">
             {
                 quit && <div>Click me!!</div>
             }
@@ -72,7 +72,7 @@ export const LandingPage = () => {
                     }
                 </div>
             </div>
-            <div className='hover:cursor-pointer bg-black w-full h-[7%] flex justify-center items-center text-white uppercase text-[10px]'>
+            <div className='hover:cursor-pointer bg-black w-full h-[7%] flex -mb-1 md:-mb-0 justify-center items-center text-white uppercase text-[10px]'>
                     <span className="up pt-1">All Rights Reserved @2024</span>
             </div>
         </div>

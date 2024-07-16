@@ -22,6 +22,7 @@ export const PageProvider = ({ children }) => {
     const [track,setTrack] = useState(false);
     const [extraInfo,setExtraInfo] = useState(true);
     const [bottomInfo,setBottomInfo] = useState(false);
+    const [details,setDetails] = useState(false);
 
     useLayoutEffect(() => {
         const lenis = new Lenis({
@@ -95,7 +96,9 @@ export const PageProvider = ({ children }) => {
             extraInfo,
             setExtraInfo,
             bottomInfo,
-            setBottomInfo
+            setBottomInfo,
+            details,
+            setDetails
             }}>
             {children}
         </PageContext.Provider>

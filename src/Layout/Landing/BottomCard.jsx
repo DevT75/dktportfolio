@@ -17,10 +17,11 @@ import usePage from '@/context/PageContext';
 import PreviousMap from 'postcss/lib/previous-map';
 import { ExtraInfo } from './ExtraInfo';
 import { Info } from './Info';
+import { Details } from './Details';
 
 
 export const BottomCard = () => {
-    const { info, stats, track, extraInfo, bottomInfo } = usePage();
+    const { info, stats, track,details, extraInfo, bottomInfo } = usePage();
     return (
         <div className='w-full h-full overflow'>
             {
@@ -28,6 +29,9 @@ export const BottomCard = () => {
             }
             {
                 extraInfo && <ExtraInfo/>
+            }
+            {
+                details && <Details/>
             }
         </div>
     )

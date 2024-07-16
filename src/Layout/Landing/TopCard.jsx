@@ -17,6 +17,7 @@ import usePage from '@/context/PageContext';
 import { Info } from './Info';
 import { Stats } from './Stats';
 import { Track } from './Track';
+import { RadarChart } from './RadarChart';
 export const TopCard = () => {
     const { info, stats, track } = usePage();
     return (

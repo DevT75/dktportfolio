@@ -8,7 +8,13 @@ export default function Home() {
     const lowerRef = useRef();
 
     useGSAP(() => {
-        gsap.fromTo(upperRef.current, {
+        const t1 = gsap.timeline({
+            onComplete: () => {
+                console.log('Completed!!');
+            }
+        });
+
+        t1.fromTo(upperRef.current, {
             backgroundColor: "white",
             zIndex: 10,
             height: "50%"
@@ -24,7 +30,7 @@ export default function Home() {
             }
         });
 
-        gsap.fromTo(lowerRef.current, {
+        t1.fromTo(lowerRef.current, {
             backgroundColor: "red",
             zIndex: 10,
             height: "50%"
@@ -33,23 +39,26 @@ export default function Home() {
             zIndex: 10,
             height: "7%",
             duration: 1,
-            delay:0.5,
             ease: "power2.out",
             onComplete: () => {
                 lowerRef.current.style.display = "none";
             }
-        });
-    },{
-        dependencies:[]
-    });
+        }, "<");
+        t1.to('.content',{
+            display: "flex",
+            opacity: 1,
+            duration: 1,
+            ease: "power2.out",
+        },'<')
+    }, []);
 
     return (
         <>
             <div ref={upperRef} className="absolute transition-all duration-500 ease-out w-full top-0 upper" id="upper" />
-            <div className="relative flex h-screen flex-col">
+            <div className="relative transition-all duration-500 ease-out content opacity-0 h-screen flex-col">
                 <LandingPage />
             </div>
-            <div ref={lowerRef} className="absolute transition-all duration-500 ease-out w-full bottom-0 lower" id="lower" />
+            <div ref={lowerRef} className="absolute transition-all duration-500 ease-out w-full bottom-0 lower m-0" id="lower" />
         </>
     );
 }

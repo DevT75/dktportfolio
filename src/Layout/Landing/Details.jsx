@@ -18,12 +18,12 @@ import { FaAngleDown } from "react-icons/fa";
 import useSound from 'use-sound';
 import usePage from '@/context/PageContext';
 
-export const ExtraInfo = () => {
+export const Details = () => {
     const [play] = useSound('/assets/rayquaza-cry.mp3');
     const handleFriend = () => {
         alert('You are my FRIEND!!');
     }
-    const { info, setInfo, stats, setStats, track, setTrack,setDetails,setExtraInfo } = usePage();
+    const { info, setInfo, stats, setStats, track, setTrack } = usePage();
     return (
         <div className={`container relative transition-all duration-500 ease-out flex flex-col-reverse justify-between items-center w-full h-full`}>
             <div className='w-full z-10 h-[25%] lg:h-[15%] border-t-4 border-b-4 border-black transition-all duration-500 ease-out mb-1'>
@@ -50,14 +50,7 @@ export const ExtraInfo = () => {
                         </div> */}
                         <span className='flex justify-center items-center mt-1.5'>Stats</span>
                     </div>
-                    <div className='flex p-[2%] relative lg:h-[90%] text-[10px] md:text-[12px] xl:text-[14px] xlg:text-[16px] flex-1 flex-row gap-2 justify-center items-center uppercase px-1.5 rounded-md border border-blue-600 border-dashed bg-white group'
-                        onClick={() => {
-                            setStats(false);
-                            setDetails(true);
-                            setExtraInfo(false);
-                            setTrack(false);
-                        }}
-                    >
+                    <div className='flex p-[2%] relative lg:h-[90%] text-[10px] md:text-[12px] xl:text-[14px] xlg:text-[16px] flex-1 flex-row gap-2 justify-center items-center uppercase px-1.5 rounded-md border border-blue-600 border-dashed bg-white group'>
                         {/* <div className='hidden lg:h-full md:flex w-[50%] flex-col -mt-1'>
                             <div className='flex flex-row justify-center items-center'>
                                 <PiArrowCircleUp size={14} />
@@ -107,7 +100,7 @@ export const ExtraInfo = () => {
                     {/* <div className='flex flex-1 flex-row justify-center items-center uppercase py-3 px-1.5 rounded-md border border-blue-600 border-dashed bg-white text-[10px]'>Quit</div> */}
                 </div>
             </div>
-            <div className='h-[85%] w-full flex flex-row justify-between items-center'>
+            <div className='h-[75%] w-full flex flex-row justify-between items-center'>
                 <div className='sidebar bg-red-700 sidebar-left shadow-sidebar-left flex-col justify-between items-center pr-3'>
                     <div className='w-full h-[50%] flex flex-col items-center pt-3'>
                         <FaCaretRight size={22} className='text-white' />
@@ -121,9 +114,8 @@ export const ExtraInfo = () => {
                         </span>
                     </div>
                 </div>
-                <div className='flex justify-start items-center w-full h-full'>
-                    <div className="w-[90%] h-full items-center">
-
+                <div className='flex justify-center items-center w-full h-full'>
+                    <div className="w-[80%] h-[80%] items-center">
                     </div>
                 </div>
                 <div className='sidebar bg-red-700 sidebar-right shadow-sidebar-right flex-col justify-between items-center pl-2'>
